@@ -1,0 +1,221 @@
+/* 1. GLOBAL RESET  Got this from google research*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*To code my CSS I am using the "Top-Down Style" I am following 
+ the order of the HTML tag as they appear */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* The hero/header section */
+.hero-section {
+    background-color: #1f2937;
+    padding: 10px 0 100px 0; /* top left and bottom  */
+    color: #f9faf8;
+}
+
+.container {
+    width: 1200px;      /* This is the fixed width that creates the 'picture frame' effect */
+    margin: 0 auto;     /* This is the magic that centers the box on the screen */
+    padding: 0 20px;    /* This adds a tiny bit of safety space on the left/right */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px; /* This gives space between the navbar and the hero-content */
+    
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    color: #f9faf8;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e5e7eb;
+    font-size: 18px;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.hero-text {
+    flex: 1; /* Makes the text box take up equal space */
+    margin-right: 16px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #e5e7eb;
+    margin-bottom: 20px;
+}
+
+/* The placeholder for the image */
+.hero-image-placeholder {
+    background-color: #6d747d;
+    width: 500px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: white;
+}
+
+.signup-btn {
+    background-color: #3882f6;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* The infor Section  */
+/* INFO SECTION */
+.info-section {
+    padding: 60px 0 100px 0;
+    text-align: center; /* This centers the "Some random information" title */
+}
+
+.info-section h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1f2937;
+    margin-bottom: 40px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* This creates the space between the 4 cards */
+}
+
+.card {
+    width: 200px; /* Limits the width of each card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    border: 4px solid #3882f6; /* The bright blue border from the mockup */
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #4b5563; /* A slightly softer grey for the subtext */
+    font-size: 16px;
+}
+
+
+/* The Quote Section */
+.quote-section {
+    background-color: #e5e7eb;
+    padding: 100px 0;
+   
+}
+
+
+.quote-wrapper {
+    max-width: 700px; /* Limits the quote width so it doesn't stretch too long */
+    margin: 0 auto;    /* Centers the wrapper inside the container */
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-text {
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 300; /* Lighter font weight for the quote */
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.quote-author {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1f2937;
+    align-self: flex-end; /* This pushes ONLY the author name to the right */
+}
+
+/* The Call to Action Section */
+.cta-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.cta-banner {
+    background-color: #3882f6;
+    padding: 40px 80px; /* Large horizontal padding to move content inward */
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between; /* Pushes text to the left, button to the right */
+    align-items: center;
+    color: #f9faf8;
+}
+
+.cta-text h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cta-text p {
+    font-size: 16px;
+    color: #e5e7eb;
+}
+
+.cta-btn {
+    border: 2px solid #ffffff; /* White border to make it pop */
+    background-color: transparent; /* Or keep it #3882f6 */
+    color: #ffffff;
+    padding: 8px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* The footer section */
+footer {
+    background-color: #1f2937;
+    color: #f9faf8;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+
