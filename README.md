@@ -1,4 +1,4 @@
-Introduction:  
+ Introduction:  
 The idea of this project is to build a simple website as part of The Odin Project’s Foundations curriculum. Odin Recipes is designed to help me practice and solidify my understanding of basic HTML.
 
 Reflection:  

@@ -1,0 +1,43 @@
+/* 1. GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center; 
+    padding: 35px;
+    gap: 30px;
+    
+}
+
+.card {
+    border: 2px solid #ddd;
+    border-radius: 20px; /* smooth corners */
+    padding: 20px;
+    width: 250px; /* 150 might be a bit norrow for text */
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+}
+
+ul{
+    list-style: none;
+    text-align: center;
+}
+
+.card.featured {
+    border-color: #007bff; /* Different border color */
+    background-color: #f8f9ff; /* Very light blue tint */
+    transform: scale(1.05); /* Makes it 5% larger than the others */
+}
