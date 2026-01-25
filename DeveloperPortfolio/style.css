@@ -1,0 +1,535 @@
+/* /-------------------------/ */
+/* 1. GLOBAL STYLES            */
+/* /-------------------------/ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-blue: #007bff;
+    --dark-navy: #000080;
+    --light-bg: #f4f4f4;
+    --text-main: #333;
+    --glass-white: rgba(255, 255, 255, 0.8);
+    --transition: 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-main);
+    background-color: white;
+    transition: background-color var(--transition), color var(--transition);
+}
+
+/* /-------------------------/ */
+/* 2. HEADER / NAVBAR          */
+/* /-------------------------/ */
+html {
+    scroll-behavior: smooth;
+}
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: var(--glass-white);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 900;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary-blue);
+}
+
+/* /-------------------------/ */
+/* 3. HERO SECTION             */
+/* /-------------------------/ */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    background-color: var(--light-bg);
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.cta-btn {
+    display: inline-block; /* Makes it behave like a button box */
+    padding: 15px 30px;
+    background-color: var(--dark-navy);
+    color: white !important; /* Forces text to be white */
+    text-decoration: none; /* REMOVES THE UNDERLINE */
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px; /* Optional: gives it slightly rounded corners */
+    transition: var(--transition);
+}
+
+.cta-btn:hover {
+    background-color: var(--primary-blue);
+    transform: scale(1.05);
+    color: white; 
+    text-decoration: none;
+}
+
+/* /-------------------------/ */
+/* 4. HERO SECTION             */
+/* /-------------------------/ */
+
+.about-section {
+    padding: 80px 10%;
+    background-color: #f9f9f9;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-image {
+    position: relative;
+    flex: 1;
+}
+
+.about-img-file {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    background: #001d3d; /* Navy */
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.experience-badge .years {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #00b4d8; /* Cyan */
+}
+
+.about-text {
+    flex: 1.2;
+}
+
+.about-text h2 {
+    color: #001d3d;
+    margin-bottom: 20px;
+}
+
+.about-text .lead {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #0077b6;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+    max-width: 650px; /* Keeps lines from getting too long and tiring the eye */
+}
+
+/* /-------------------------/ */
+/* 5. SKILLS SECTION           */
+/* /-------------------------/ */
+.skills-section {
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--primary-blue);
+    transition: var(--transition);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+}
+
+/* /-------------------------/ */
+/* 6. DARK MODE SUPPORT        */
+/* /-------------------------/ */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+
+    .navbar {
+        background-color: rgba(18, 18, 18, 0.8);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+
+    .nav-links a {
+        color: #bbb;
+    }
+
+    .hero {
+        background-color: #1a1a1a;
+    }
+
+    .hero-content p {
+        color: #aaa;
+    }
+
+    .skill-card {
+        background-color: #1e1e1e;
+        color: white;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    }
+}
+
+/* /-------------------------/ */
+/* 7. Project Section     */
+/* /-------------------------/ */
+.projects-section {
+    padding: 100px 5%;
+    background-color: #fcfcfc; /* Very light gray to make cards pop */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #001d3d; /* Your logo Navy */
+    margin-bottom: 60px;
+    position: relative;
+}
+
+/* The Grid System */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Project Cards */
+.project-card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Keeps content and buttons in a column */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eef2f3;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Visual/Image Placeholder */
+.project-image {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Gradient backgrounds for your 3 specific projects */
+.landing-bg { background: linear-gradient(45deg, #001d3d, #003566); }
+.pricing-bg { background: linear-gradient(45deg, #0077b6, #00b4d8); }
+.hero-bg    { background: linear-gradient(45deg, #03045e, #023e8a); }
+
+/* Card Content */
+.project-info {
+    padding: 25px;
+    flex-grow: 1; /* This pushes the links to the bottom */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info h3 {
+    margin: 0 0 15px 0;
+    color: #001d3d;
+}
+
+.project-info p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Styling the "Independent Practice" Bold Text */
+.project-info strong {
+    color: #00b4d8; /* Your logo Cyan */
+    font-size: 0.9rem;
+}
+
+/* Buttons at the bottom of the card */
+.project-links {
+    margin-top: auto; /* Magic trick: pushes links to the very bottom */
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #0077b6;
+    color: #0077b6;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: #0077b6;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 119, 182, 0.3);
+}
+
+/* /-------------------------/ */
+/* 8. Contact Section          */
+/* /-------------------------/ */
+.contact-section {
+    padding: 100px 10%;
+    background-color: #f4f7f6; /* Light, clean gray */
+    text-align: center;
+}
+
+.btn-resume {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background-color: transparent;
+    border: 2px solid #00b4d8; /* Your logo Cyan */
+    color: #00b4d8;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-resume:hover {
+    background-color: #00b4d8;
+    color: white;
+    transform: scale(1.05);
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-intro {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.info-card h3 {
+    color: #001d3d; /* Your logo Navy */
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.info-card p {
+    color: #0077b6;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.main-cta-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #00b4d8; /* Your logo Cyan */
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 10px 20px rgba(0, 180, 216, 0.2);
+}
+
+.main-cta-btn:hover {
+    background-color: #0077b6;
+    transform: translateY(-3px);
+}
+
+.social-btn {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 8px 20px;
+    border: 2px solid #001d3d;
+    color: #001d3d;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.social-btn:hover {
+    background-color: #001d3d;
+    color: white;
+}
+
+
+
+
+/* /-------------------------/ */
+/* 9.      Footer Section      */
+/* /-------------------------/ */
+
+.main-footer {
+    background-color: #001d3d; /* Matching your logo Navy */
+    color: #ffffff;
+    padding: 60px 5% 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-logo-img {
+    height: 45px;
+    /* Remove the 'invert' filter entirely */
+    filter: none; 
+    
+}
+
+.footer-logo p {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-links h4, .footer-socials h4 {
+    color: #00b4d8; /* Your logo Cyan */
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a, .social-icons a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover, .social-icons a:hover {
+    color: #00b4d8;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #777;
+    font-size: 0.8rem;
+}
+
+
